@@ -6,7 +6,7 @@ def format_human(images: list, title: str = "Ubuntu Cloud Image Report") -> str:
     lines = []
     lines.append("=" * 60)
     lines.append(f"  {title}")
-    lines.append(f"  Generated: {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}")
+    lines.append(f"  Generated: {datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
     lines.append("=" * 60)
     if not images:
         lines.append("  No images found matching the criteria.")
